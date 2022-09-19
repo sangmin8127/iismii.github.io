@@ -1,0 +1,36 @@
+.wrap {
+	margin: 0 auto;
+	width: 50%;
+	background-color: #f1f1f1;
+	padding: 20px;
+}
+.wrap input {
+	margin: 0 auto;
+	width: 80%;
+	background-color: #f1f1f1;
+	padding: 20px;
+	margin: 20px 0 0 0;
+}
+#title1 {
+	font-size: 30px;
+	font-weight: 700;
+	background-color: #f1f1f1;
+	margin: 20px;
+	text-align: center;
+}
+#sub1 {
+	font-size: 12px;
+	padding: 10px;
+}
+#sub2 {
+	font-size: 12px;
+	padding: 10px;
+}
+.sub1 {
+	font-size: 12px;
+	padding: 10px;
+}
+.sub2 {
+	font-size: 12px;
+	padding: 10px;
+}

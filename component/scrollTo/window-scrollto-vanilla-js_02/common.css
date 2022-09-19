@@ -1,0 +1,48 @@
+h2 {
+  text-align: center;
+}
+
+h2 p {
+  font-size: .8em;
+  font-weight: 500;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.section {
+  height: 500px;
+  background: linear-gradient(180deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#section2 {
+  height: 1000px;
+}
+
+.section button {
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.section .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.section #txt3 {
+  background-color: #efefef;
+  border-radius: 5px;
+  margin: 20px 50px;
+  max-height: 500px;
+  overflow: scroll;
+  padding: 30px 50px;
+  font-size: 1.8rem;
+  font-weight: 300;
+}

@@ -1,0 +1,36 @@
+body{
+  height:10000px;
+  width:10000px;
+  background-color:#00BAD1
+}
+div{
+  position: fixed;
+  background: rgba(0,0,0,0.3);
+  color:#fff;
+  padding:10px 20px
+
+}
+#mainOne{
+  top:10px;
+}
+#mainTow{
+  top:50px;
+
+}
+
+button{
+  position: fixed;
+  cursor: pointer;
+  bottom:10px;
+  width:100px;
+  height:40px;
+  background-color:rgba(0,0,0,0.4);
+  border:0;
+  color:#fff
+}
+#Top{
+  right:20px;
+}
+#Move{
+  right:140px;
+            }

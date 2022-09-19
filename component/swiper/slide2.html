@@ -1,0 +1,159 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+</head>
+<style>
+.swiper-container {height: 300px;overflow: visible;}
+.swiper-container2 {height: 500px;overflow: visible;}
+.swiper-container3 {height: 500px;overflow: visible;}
+.swiper-wrapper {height: 500px;}
+.swiper-slide {opacity:0.4; transition:opacity 0.3s;}
+.swiper-slide img {width:100%;}
+.swiper-slide-active,
+.swiper-slide-active + .swiper-slide,
+.swiper-slide-active + .swiper-slide + .swiper-slide,
+.swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {opacity:1}
+</style>
+
+<h2>슬라이더1</h2>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./image/flower.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/lightning.jpg"></div>
+        <div class="swiper-slide"><img src="./image/moon.jpg"></div>
+        <div class="swiper-slide"><img src="./image/nature.jpg"></div>
+        <div class="swiper-slide"><img src="./image/space.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/flower.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/lightning.jpg"></div>
+        <div class="swiper-slide"><img src="./image/moon.jpg"></div>
+        <div class="swiper-slide"><img src="./image/nature.jpg"></div>
+        <div class="swiper-slide"><img src="./image/space.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<h2>슬라이더2</h2>
+<div class="swiper-container2">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./image/flower.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/lightning.jpg"></div>
+        <div class="swiper-slide"><img src="./image/moon.jpg"></div>
+        <div class="swiper-slide"><img src="./image/nature.jpg"></div>
+        <div class="swiper-slide"><img src="./image/space.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/flower.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/lightning.jpg"></div>
+        <div class="swiper-slide"><img src="./image/moon.jpg"></div>
+        <div class="swiper-slide"><img src="./image/nature.jpg"></div>
+        <div class="swiper-slide"><img src="./image/space.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<h2>슬라이더3</h2>
+<div class="swiper-container3">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./image/flower.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/lightning.jpg"></div>
+        <div class="swiper-slide"><img src="./image/moon.jpg"></div>
+        <div class="swiper-slide"><img src="./image/nature.jpg"></div>
+        <div class="swiper-slide"><img src="./image/space.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/flower.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/lightning.jpg"></div>
+        <div class="swiper-slide"><img src="./image/moon.jpg"></div>
+        <div class="swiper-slide"><img src="./image/nature.jpg"></div>
+        <div class="swiper-slide"><img src="./image/space.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+        <div class="swiper-slide"><img src="./image/fox.jpg"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+
+    var mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        observer: true,
+        observeParents: true,
+        spaceBetween: 24,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 5,
+                slidesPerGroup: 3,
+            },
+            360: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            }
+        }
+    });
+
+    var mySwiper = new Swiper('.swiper-container2', {
+        slidesPerView: 3,
+        slidesPerGroup: 2,
+        observer: true,
+        observeParents: true,
+        spaceBetween: 24,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            360: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            }
+        }
+    });
+
+    var mySwiper = new Swiper('.swiper-container3', {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        observer: true,
+        observeParents: true,
+        spaceBetween: 24,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1280: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+            },
+            720: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            }
+        }
+    });
+    
+});
+</script>

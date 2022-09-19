@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .hidden {
+      display: none;
+      opacity: 0;
+    }
+
+    .appear {
+      animation: fade-in 1s;
+      animation-fill-mode: forwards;
+      display: flex;
+    }
+
+    .disappear {
+      animation: fade-out 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade-out {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    .container {
+      font-family: sans-serif;
+    }
+
+    .test-button {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      background: #f5f5f5;
+      cursor: pointer;
+      text-align: center;
+      margin: 1rem;
+    }
+
+    .test-button:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="trigger test-button">
+      클릭하면 display: none을 block으로 변경합니다.
+    </div>
+    <div class="hidden test-button">I'm hidden</div>
+  </div>
+
+</body>
+
+<script>
+  document.querySelector(".trigger").addEventListener("click", function () {
+    document.querySelector(".hidden").classList.remove("disappear");
+    document.querySelector(".hidden").classList.add("appear");
+  });
+
+  document.querySelector(".hidden").addEventListener("click", function () {
+    const target = this;
+    if (target.classList.contains("appear")) {
+      target.classList.add("disappear");
+      setTimeout(function () {
+        target.classList.remove("appear");
+      }, 1001);
+    }
+  });
+</script>
+
+</html>

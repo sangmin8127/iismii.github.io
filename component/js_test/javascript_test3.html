@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_test_03</title>
+    <style>
+        .alert-box {
+            background: #ff5100;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="title"></p>
+        <button onclick="알림창닫기()"> X </button>
+    </div>
+    <button onclick="알림창열기('아이디입력하세요')">버튼1</button>
+    <button onclick="알림창열기('비번입력하세요')">버튼2</button>
+
+    <!-- 버튼이라는 파라미터를 넣으면 같은 종류의 함수를 줄여서 효율적으로 코드를 줄일 수 있다. -->
+    <script>
+        function 알림창열기(동시실행) {
+            document.getElementById('title').innerHTML = 동시실행;
+            document.getElementById('alert').style.display = 'block';
+        }
+        function 알림창닫기() {
+            document.getElementById('alert').style.display = 'none';
+        }
+        // function 알림창열기2() {
+        //     document.getElementById('title').innerHTML = '비번을입력하세요';
+        //     document.getElementById('alert').style.display = 'block';
+        // }
+    </script>
+</body>
+</html>

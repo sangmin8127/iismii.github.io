@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_test_02</title>
+    <style>
+        .alert-box {
+            background: #ff5100;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box" id="alert">Alert 박스</div>
+    <button onclick="알림창열기닫기('block')">열기</button>
+    <button onclick="알림창열기닫기('none')">닫기</button>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <input type="radio" name="CAT-radio" onclick="btnActive()">
+    <input type="radio" name="CAT-radio" onclick="btnActive()">
+    <input type="radio" name="CAT-radio" onclick="btnActive()">
+    <input type="radio" name="CAT-radio" onclick="btnActive()">
+    <input type="radio" name="CAT-radio" onclick="btnActive()">
+    <input type="radio" name="CAT-radio" onclick="btnActive()">
+    <input type="radio" name="CAT-radio" onclick="btnActive()">
+    <input type="radio" name="CAT-radio">
+    <input type="radio" name="CAT-radio">
+    <br>
+    <input type="button" id="disabled" disabled value="버튼 비활성화 테스트">
+
+    <!-- 버튼이라는 파라미터를 넣으면 같은 종류의 함수를 줄여서 효율적으로 코드를 줄일 수 있다. -->
+    <script>
+        function 알림창열기닫기(버튼) {
+            document.getElementById('alert').style.display = 버튼;
+        }
+        function btnActive() {
+            const target =
+        document.getElementById('disabled');
+            target.disabled = false;
+        }
+    </script>
+</body>
+</html>

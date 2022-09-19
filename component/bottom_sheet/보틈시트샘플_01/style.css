@@ -1,0 +1,469 @@
+:root {
+  --transition: all 1s;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1482823984759-365bf06eb5fb?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3a7cf5e983a69ee60a3590077e2684fd);
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+
+  transition: var(--transition);
+}
+
+.headline, .subheadline {
+  font-weight: lighter;
+  transform: translateY(10%);
+  opacity: 0;
+  transition: var(--transition);
+}
+.headline {
+  font-size: 4em;
+  letter-spacing: 25px;
+
+}
+.subheadline {
+  letter-spacing: 15px;
+}
+
+/* class added to header on first scroll */
+.header-slide-in {
+  transform: translate(0);
+  opacity: 1;
+}
+.header-fade-out {
+  opacity: 0;
+}
+
+.panels {
+  width: 80%;
+  margin: 10% auto;
+  line-height: 1.5;
+}
+
+.panel {
+  display: flex;
+  margin: 2em 0;
+  align-items: center;
+  
+  opacity: 0;
+  transform: translateY(10%);
+  
+  transition: var(--transition);
+}
+
+.panel div {
+  width: 50%;
+  padding: 2em;
+}
+
+.panel img {
+  width: 100%;
+  box-shadow: 0 20px 25px -10px rgba(0,0,0,.6);
+}
+
+.panel-fade-in {
+  opacity: 1;
+  transform: translate(0);
+}
+
+
+
+/* 보틈시트 시작 */
+/* 보틈시트 시작 */
+/* 보틈시트 시작 */
+/* 보틈시트 시작 */
+/* 보틈시트 시작 */
+
+.bs {
+  pointer-events: none;
+  visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 15;
+  transition: opacity, visibility 0.25s; }
+  .bs.active {
+    visibility: visible;
+    pointer-events: unset; }
+    .bs.active .bs__sheet:before {
+      opacity: 1;
+      -webkit-opacity: 1; }
+  .bs__scrim {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(40, 50, 60, 0.2);
+    transition: opacity 0.3s;
+    top: 0; }
+    .active .bs__scrim {
+      opacity: 1; }
+  .bs__sheet {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -10rem;
+    width: 100%;
+    min-height: 10%;
+    background: #FFF;
+    border-radius: 1.6rem 1.6rem 0 0;
+    padding: 0 2.4rem 10rem 2.4rem;
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%); }
+    .bs__sheet:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-top-left-radius: 1.6rem;
+      border-top-right-radius: 1.6rem;
+      box-shadow: 0 0 20rem 10rem rgba(40, 50, 60, 0.14);
+      opacity: 0;
+      transition: opacity 200ms ease;
+      -webkit-transition: opacity 200ms ease; }
+    .active .bs__sheet {
+      transform: translateY(0);
+      -webkit-transform: translateY(0); }
+    .bs__sheet.active {
+      transform: var(--translateY);
+      -webkit-transform: var(--translateY); }
+  .bs__handle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .bs__handle > span {
+      display: block;
+      height: .2rem;
+      width: 4rem;
+      margin-bottom: .2rem;
+      background-color: #C5C8CE;
+      border-radius: .2rem; }
+
+
+.scheduled-drug-bs > .bs__sheet .drug-item-list__container {
+  width: 100%;
+  padding: .8rem .8rem 0 .8rem; }
+
+.scheduled-drug-bs > .bs__sheet .drug-item-list__header {
+  border-bottom: 1px solid #F3F4F5;
+  width: 100%; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .time-info {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: .8rem; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .time-info > .time {
+    color: #FC630E;
+    font-weight: 700; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .time-info > .time-name {
+    padding-left: 1.2rem;
+    color: #646F7C;
+    position: relative; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .time-info > .time-name::before {
+      position: absolute;
+      left: .6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      content: "";
+      height: 1.2rem;
+      width: .1rem;
+      background: #646F7C; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .title-wrap > .title {
+      display: inline-flex;
+      align-items: flex-end;
+      color: #28323C;
+      overflow: hidden;
+      margin-right: .8rem; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .title-wrap > .title span:nth-child(1) {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .title-wrap > .title span:nth-child(2).drugCount {
+        font-size: 1.8rem;
+        font-weight: 400;
+        white-space: nowrap;
+        padding-bottom: .2rem;
+        margin-left: .4rem; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .title-wrap > a {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.4rem;
+      padding: .4rem .8rem;
+      border-radius: .8rem;
+      color: #567BFD;
+      background-color: rgba(222, 237, 255, 0.7);
+      transition: .2s; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .title-wrap > a:active {
+        background: #F3F4F5; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__header > .title-wrap > a > img {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-left: .4rem; }
+
+.scheduled-drug-bs > .bs__sheet .drug-item-list__body {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #F3F4F5; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__body > .list {
+    display: block; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__body .toggle__take-idv {
+    display: none; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .toggle__take-idv-checkbox {
+      position: absolute;
+      width: 100%;
+      opacity: 0; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__body .toggle__take-idv-checkbox:checked + .toggle__take-idv-label {
+        background: #FFEFE7;
+        border-color: #646F7C;
+        transition: all .2s;
+        -webkit-transition: all .2s; }
+        .scheduled-drug-bs > .bs__sheet .drug-item-list__body .toggle__take-idv-checkbox:checked + .toggle__take-idv-label > span {
+          opacity: 0; }
+        .scheduled-drug-bs > .bs__sheet .drug-item-list__body .toggle__take-idv-checkbox:checked + .toggle__take-idv-label:after {
+          opacity: 1; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .toggle__take-idv-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 5.8rem;
+      height: 3.3rem;
+      border: 1px solid #C5C8CE;
+      border-radius: .8rem;
+      font-size: 1.4rem;
+      color: #646F7C;
+      position: relative; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__body .toggle__take-idv-label:after {
+        content: "";
+        background-image: url("src/img/ico-check.svg");
+        background-position: center;
+        background-size: 1.7rem;
+        width: 1.7rem;
+        height: 1.1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__body li.drug-item {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex: 10;
+    font-size: 1.6rem;
+    position: inherit;
+    overflow: hidden;
+    margin-bottom: 1.6rem;
+    position: relative;
+    white-space: nowrap; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body li.drug-item > .img-name-wrap {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      overflow: hidden;
+      flex: 8.3; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__body li.drug-item > .img-name-wrap > img {
+        display: block;
+        width: 5.8rem;
+        border-radius: .6rem;
+        border: 0.1rem solid #F3F4F5;
+        mask-size: 5.8rem 3.3rem;
+        mask-position: center; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__body li.drug-item > .img-name-wrap > .name {
+        max-width: calc(100% - 6rem);
+        padding-left: 1.2rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body li.drug-item .dose {
+      display: inline-flex;
+      justify-content: flex-end;
+      text-align: right;
+      flex: 1.7;
+      color: #9AA1AA;
+      padding-right: .6rem;
+      padding-left: .8rem; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body li.drug-item:last-child {
+      margin-bottom: 0; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.6rem;
+    transition: all .2s; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-prev, .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-next {
+      display: inline-block;
+      width: 8.8rem;
+      height: 4rem;
+      border: 1px solid #E9EBEE;
+      border-radius: .8rem;
+      position: relative; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-prev:active, .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-next:active {
+        background: #F3F4F5;
+        opacity: .7; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-prev:after, .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-next:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background-image: url("src/img/ico-dropdown.svg");
+      background-size: cover;
+      background-position: center;
+      width: 1.6rem;
+      height: 1.6rem; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-prev:after {
+      transform: translate(-50%, -50%) rotate(90deg); }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-next:after {
+      transform: translate(-50%, -50%) rotate(-90deg); }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .disabled {
+      opacity: .3;
+      background: #F3F4F5; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__body .pagination-wrap .pagination-layout {
+      font-size: 1.4rem;
+      color: #646F7C; }
+
+.scheduled-drug-bs > .bs__sheet .drug-item-list__footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__footer:last-child {
+    margin-bottom: 2.4rem; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin: .8rem 0 1.6rem 0; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .takenStatus {
+    display: inline-flex;
+    flex: 1; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all {
+    display: block;
+    width: 12rem;
+    height: 100%;
+    background: rgba(86, 123, 253, 0.05);
+    border-radius: 1rem;
+    font-size: 1.4rem; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-label {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: .8rem 0;
+      justify-content: space-around; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-label:before {
+        content: "";
+        background: #FFF;
+        box-shadow: 0 0 0 1px #DEEDFF inset;
+        border-radius: .8rem;
+        height: 2.8rem;
+        width: 5.6rem;
+        position: absolute;
+        left: .3rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        -webkit-transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-label div {
+        width: 100%;
+        display: flex;
+        justify-content: space-around; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-label .all {
+        color: #4869DF;
+        position: relative;
+        transition: .3s;
+        -webkit-transition: .3s; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-label .idv {
+        color: rgba(86, 123, 253, 0.3);
+        position: relative;
+        transition: .3s;
+        -webkit-transition: .3s; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-checkbox {
+      position: absolute;
+      width: 100%;
+      opacity: 0; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-checkbox:checked + .toggle__take-all-label:before {
+        transform: translate(5.9rem, -50%);
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-checkbox:checked ~ .toggle__take-all-label > div > .idv {
+        color: #4869DF; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-checkbox:checked ~ .toggle__take-all-label > div > .all {
+        color: rgba(86, 123, 253, 0.3); }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-checkbox:checked ~ .toggle__take-all-label > div > .idv {
+        color: #4869DF; }
+      .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .toggle__take-all-checkbox:checked ~ .toggle__take-all-label > div > .all {
+        color: rgba(86, 123, 253, 0.3); }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .btn--take-all-confirm {
+    display: block;
+    text-align: center;
+    padding: 1.4rem 0;
+    background: #FF8947;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #FFF;
+    border-radius: .8rem; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .btn--take-idv-confirm {
+    text-align: center;
+    padding: 1.4rem 0;
+    background: #FFEFE7;
+    box-shadow: 0 0 0 1px #646F7C inset;
+    font-size: 1.6rem;
+    color: #646F7C;
+    border-radius: .8rem;
+    display: none; }
+    .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .btn--take-idv-confirm:disabled {
+      opacity: .4; }
+  .scheduled-drug-bs > .bs__sheet .drug-item-list__footer .btn--skip {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.4rem 0;
+    margin-top: 1.2rem;
+    border-radius: .8rem;
+    color: #646F7C;
+    background: #E9EBEE; }

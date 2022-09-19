@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - timepicker with swiper.js</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="container">
+    <div class="header">
+      <div class="title">시간 선택</div>
+      <button class="cancel"> <img src="/m/images/btn_cancel.png" alt="" class="modal_cancel"
+          onclick="modal_exit()"></button>
+    </div>
+    <div class="picker">
+      <div class="swiper-container ampm">
+        <div class="swiper-wrapper ampm_box">
+          <div class="ampm swiper-slide">오전</div>
+          <div class="ampm swiper-slide">오후</div>
+        </div>
+      </div>
+      <div class="swiper-container hours">
+        <div class="swiper-wrapper">
+          <div class="time swiper-slide">1시</div>
+          <div class="time swiper-slide">2시</div>
+          <div class="time swiper-slide">3시</div>
+          <div class="time swiper-slide">4시</div>
+          <div class="time swiper-slide">5시</div>
+          <div class="time swiper-slide">6시</div>
+          <div class="time swiper-slide">7시</div>
+          <div class="time swiper-slide">8시</div>
+          <div class="time swiper-slide">9시</div>
+          <div class="time swiper-slide">10시</div>
+          <div class="time swiper-slide">11시</div>
+          <div class="time swiper-slide">12시</div>
+        </div>
+      </div>
+      <div class="vizor"></div>
+    </div>
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

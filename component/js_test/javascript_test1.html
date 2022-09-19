@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript_test_01</title>
+    <script type="text/javascript">
+        function hello() {
+            var dt = Date();
+            var msg = 'Hello, World! Today is ' + dt;
+            alert(msg);   
+        } 
+    </script>
+</head>
+<body onload="hello();">
+
+    <script type="text/javascript">
+        var dt = Date();
+        var msg ='<h3>Hello, World! Today is ' + dt + '<h3>';
+        document.writeln(msg);
+    </script>
+</body>
+</html>

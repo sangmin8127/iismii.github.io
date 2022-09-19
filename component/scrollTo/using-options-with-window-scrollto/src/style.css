@@ -1,0 +1,19 @@
+body {
+  font-size: 20px;
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.top {
+  position: sticky;
+  bottom: 20px;
+  left: 100vw;
+  background: lightblue;
+}
+
+p:first-of-type {
+  color: firebrick;
+}

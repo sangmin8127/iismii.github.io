@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼 클릭 시 효과</title>
+</head>
+<style>
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn--test--01 {
+    transition: all .25s;
+    width: 20%;
+    height: 10rem;
+    padding: 3rem;
+    background: #ff9100;
+    color: #fff;
+    text-align: left;
+    word-break: keep-all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+
+  .btn--test--01:active {
+    height: 20rem;
+    background-color: rgba(255, 230, 0, 0.8);
+  }
+
+  .btn--test--02 {
+    transition: all .25s;
+    width: 20%;
+    height: 10rem;
+    padding: 3rem;
+    background: #ff7300;
+    color: #fff;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    word-break: break-all;
+  }
+
+  .btn--test--02:active {
+    width: 50%;
+    background-color: rgba(255, 8, 0, 0.8);
+    font-size: 2rem;
+  }
+</style>
+
+<body>
+  <div class="btn--test--01">
+    단어별로 줄넘김 :<br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, impedit omnis culpa ut autem excepturi libero,
+    aut, quisquam odit aliquid dicta saepe facilis laboriosam maiores! Molestiae cupiditate ab consequatur autem!
+  </div>
+
+  <div class="btn--test--02">
+    글자별로 줄넘김 :<br>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi architecto velit cupiditate quam iusto reprehenderit
+    quod! Aut facilis reiciendis hic. Quae fugiat rem, veritatis eligendi non culpa. Numquam, maxime eius?
+  </div>
+</body>
+
+</html>

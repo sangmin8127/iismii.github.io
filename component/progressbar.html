@@ -1,0 +1,45 @@
+<style>
+    #progress-container {
+        width: 100%;
+        background-color: #DDDDDD;
+    }
+
+    #progressBar {
+        width: 0;
+        height: 30px;
+        line-height: 30px;
+        background-color: #8C9CEC;
+        text-align: center;
+    }
+</style>
+
+<div id="progress-container">
+    <div id="progressBar"></div>
+</div>
+<br>
+
+
+<script>
+    var i = 0;
+
+    function doseDrugsProgress() {
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("progressBar");
+            var width = 0;
+            var id = setInterval(frame, 30);
+
+            function frame() {
+                if (width >= 90) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                    //elem.innerHTML = width + "%";
+                }
+            }
+        }
+    }
+    doseDrugsProgress()
+</script>

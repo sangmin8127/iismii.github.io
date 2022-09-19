@@ -1,0 +1,122 @@
+/* Alarm Setting Box */
+  .alarm {
+    padding-top: 12%;
+    padding-bottom: 0%;
+    padding-left: 6%;
+    padding-right: 6%;
+    width:300px;
+  }
+
+  .alarm .toggle_off {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 61px;
+    background-color: #2ac1bc;
+    border: 1px solid #2ac1bc;
+    border-radius: 12px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .alarm .toggle_off .txt {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .alarm .toggle_off .btn {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .alarm .toggle_off .btn .button {
+    width: 27px;
+    height: 27px;
+    background-color: #1d8787;
+    border-radius: 50%;
+    position: relative;
+    left: 62%;
+    top: 2px;
+  }
+
+  .alarm .toggle_off .btn .background {
+    width: 51px;
+    height: 31px;
+    background-color: #cdefee;
+    border-radius: 16px;
+    position: relative;
+  }
+
+.toggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 61px;
+    background-color: #f6fcfc;
+    border: 1px solid #cdefee;
+    border-radius: 12px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .toggle_active{
+    background-color: #2ac1bc;
+    border: 1px solid #2ac1bc;
+  }
+  .toggle-txt{
+    color: #1d8787;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .txt_active{
+    color: #ffffff;
+  }
+  .toggle-btn{
+    width: 51px;
+    height: 31px;
+    margin: 0px;
+    border-radius: 16px;
+    display: inline-block;
+    position: relative;
+    background: #add4d4;
+    cursor: pointer;
+    -webkit-transition: background-color .40s ease-in-out;
+    -moz-transition: background-color .40s ease-in-out;
+    -o-transition: background-color .40s ease-in-out;
+    transition: background-color .40s ease-in-out;
+    cursor:pointer;
+  }
+
+  .active{
+    background : #cdefee;
+  }
+  .round-btn{
+    width: 27px;
+    height: 27px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    left: 1px;
+    top: 2px;
+    -webkit-transition: all .30s ease-in-out;
+    -moz-transition: all .30s ease-in-out;
+    -o-transition: all .30s ease-in-out;
+    transition: all .30s ease-in-out;
+  }
+  .btn_active{
+    left: 21px;
+    background-color: #1d8787;
+  }
+  .cb-value{
+    position: absolute;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 9;
+    cursor:pointer;
+  }

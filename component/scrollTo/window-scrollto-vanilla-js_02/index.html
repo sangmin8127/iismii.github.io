@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스크롤 마스터!!!</title>
+  <link href="./common.css" rel="stylesheet">
+  <script defer src="./scroll.js"></script>
+</head>
+
+<body>
+
+  <section class='section'>
+    <h2 id="txt1">페이지 #1 <p>(height: 500px)</p>
+    </h2>
+    <div>
+      <button id='button1'>scroll down btn#1</button>
+    </div>
+  </section>
+
+  <section class='section' id='section1'>
+    <h2>현재 스크롤 Y위치<p>(window.pageYOffset)</p>
+      <div class="row">
+        <div id="txt2">0</div>
+        <div>px</div>
+      </div>
+    </h2>
+    <div>
+      <button id='button2'>scroll down btn#2</button>
+    </div>
+  </section>
+
+  <section class='section' id='section2'>
+    <h2>TextArea 스크롤 테스트</h2>
+    <div>
+      <button id='button'>textbox scroll up btn</button>
+    </div>
+    <div id="txt3">
+      <h1>list-style-position: inside&outside sample</h1>
+      <div>
+        <ul style="list-style-position: inside;">
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum expedita sequi qui iusto, illo velit, odio at commodi libero doloremque ratione officia accusantium distinctio saepe iste pariatur dolorum consectetur!
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum expedita sequi qui iusto, illo velit, odio at commodi libero doloremque ratione officia accusantium distinctio saepe iste pariatur dolorum consectetur!
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum expedita sequi qui iusto, illo velit, odio at commodi libero doloremque ratione officia accusantium distinctio saepe iste pariatur dolorum consectetur!
+          </li>
+        </ul>
+        <ul style="list-style-position: outside;" alt="outside가 기본값임">
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum expedita sequi qui iusto, illo velit, odio at commodi libero doloremque ratione officia accusantium distinctio saepe iste pariatur dolorum consectetur!
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum expedita sequi qui iusto, illo velit, odio at commodi libero doloremque ratione officia accusantium distinctio saepe iste pariatur dolorum consectetur!
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum expedita sequi qui iusto, illo velit, odio at commodi libero doloremque ratione officia accusantium distinctio saepe iste pariatur dolorum consectetur!
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class='section' id='section3'>
+    <h2>TOP으로 올리기 스크롤 테스트</h2>
+    <div>
+      <button id='button3'>scroll top btn</button>
+    </div>
+  </section>
+</body>
+
+</html>

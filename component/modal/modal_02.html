@@ -1,0 +1,95 @@
+<style>
+/* Modal styles */
+.modal {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity linear 0.25s;
+}
+.modal:target {
+  height: 100%;
+  opacity: 1;
+}
+.modal--content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top .25s ease;
+}
+.modal--content--close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  line-height: 20px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px;
+  background: #2980b9;
+  color: #fff;
+}
+.modal--close::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Irrelevant styles */
+body {
+  font-family: Lato, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-family: Montserrat, sans-serif;
+  background: #2980b9;
+  color: #fff;
+  padding: 60px 20px;
+  margin: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+</style>
+
+
+
+
+<h1>Pure CSS modal</h1>
+<div class="container">
+  <p>A basic implementation of a pure CSS modal dialog without the use of any Javascript anywhere!</p>
+  <p>It makes use of the <code>:target</code> pseudo-class to display the targetted modal box.</p>
+  <p>You can <a href="#modal1">click me</a> for an example.</p>
+
+  <div class="modal" id="modal1">
+    <a class="modal--close" href="#"></a>
+    <div class="modal--content">
+      <a class="modal--content--close" href="#">x</a>
+      <h3>Hello, this is a modal.</h3>
+      <p>Some modal text goes in here.</p>
+    </div>
+  </div>
+</div>
